@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code Hunt — Admin</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/admin.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark">C</span> code hunt</a>
+    <a class="admin-link" href="/">Public site</a>
+  </header>
+  <main>
+    <section class="play-card admin-card">
+      <p class="eyebrow">RESTRICTED AREA</p>
+      <h1 class="admin-title">Admin panel</h1>
+      <p class="muted">Only the configured, verified administrator Google account can access private winner information.</p>
+      <button id="signin-button" class="button button-dark" type="button">Sign in with Google</button>
+      <button id="signout-button" class="button" type="button" hidden>Sign out</button>
+      <p id="admin-message" class="message" role="alert" hidden></p>
+      <div id="winner-details" hidden>
+        <h2>Winner details</h2>
+        <dl>
+          <dt>Username</dt><dd id="winner-username"></dd>
+          <dt>Email</dt><dd id="winner-email"></dd>
+          <dt>Mobile</dt><dd id="winner-mobile"></dd>
+          <dt>UPI ID</dt><dd id="winner-upi"></dd>
+          <dt>Firebase UID</dt><dd id="winner-uid"></dd>
+          <dt>Prize</dt><dd id="winner-prize"></dd>
+          <dt>Winning time</dt><dd id="winner-won-at"></dd>
+          <dt>Payment status</dt><dd id="winner-paid"></dd>
+          <dt>Payment audit time</dt><dd id="winner-paid-at"></dd>
+        </dl>
+        <button id="mark-paid" class="button button-dark" type="button" hidden>Mark prize as paid</button>
+        <p class="field-note">Only mark this after payment has actually been confirmed. This records an admin audit timestamp; it does not transfer money.</p>
+      </div>
+    </section>
+  </main>
+  <footer><span>CODE HUNT ADMIN</span><span>Private information is protected by the server.</span></footer>
+</body>
+</html>
